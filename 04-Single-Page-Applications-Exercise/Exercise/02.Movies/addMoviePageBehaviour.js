@@ -1,18 +1,12 @@
-import {renderAddMoviePage, renderHomePage} from './navigation.js';
+import {renderHomePage} from './navigation.js';
 import {buildNotificationEl} from './helpers.js';
 
-let addMovieButton = document.querySelector('#add-movie-button a');
 let addMovieSection = document.querySelector('#add-movie');
 let addMovieFormEl = addMovieSection.querySelector('form');
 let moviesUrl = 'http://localhost:3030/data/movies';
 
 let notificationEl = buildNotificationEl();
 addMovieSection.appendChild(notificationEl);
-
-addMovieButton.addEventListener('click', function (event) {
-    event.preventDefault();
-    renderAddMoviePage();
-})
 
 addMovieFormEl.addEventListener('submit', function (event) {
     event.preventDefault();
