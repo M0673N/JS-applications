@@ -1,5 +1,5 @@
-import {renderHomePage, checkIfLogged} from './navigation.js';
-import {buildNotificationEl} from './helpers.js';
+import {renderHomePage} from './navigation.js';
+import {buildNotificationEl, checkIfLogged} from './helpers.js';
 
 let loginUrl = 'http://localhost:3030/users/login';
 let loginElFromLoginPage = document.querySelector('#form-login');

@@ -1,4 +1,5 @@
-import {checkIfLogged, renderLoginPage} from './navigation.js';
+import {renderLoginPage} from './navigation.js';
+import {checkIfLogged} from './helpers.js';
 
 let navBar = document.querySelector('#container');
 let [_, welcomeEl, logoutEl, loginEl, registerEl] = navBar.querySelectorAll('a');

@@ -1,5 +1,5 @@
-import {renderHomePage, checkIfLogged} from './navigation.js';
-import {buildNotificationEl} from './helpers.js';
+import {renderHomePage} from './navigation.js';
+import {buildNotificationEl, checkIfLogged} from './helpers.js';
 
 let registerUrl = 'http://localhost:3030/users/register';
 let registerElFromRegisterPage = document.querySelector('#form-sign-up');
