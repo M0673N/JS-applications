@@ -1,0 +1,35 @@
+function fakeResponse(body) {
+    return {
+        status: 200,
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body)
+    }
+}
+
+let mockData = {
+    "-LxHVtajG3N1sU714pVj": {
+        "author": "Spami",
+        "content": "Hello, are you there?"
+    },
+    "-LxIDxC-GotWtf4eHwV8": {
+        "author": "Garry",
+        "content": "Yep, whats up :?"
+    },
+    "-LxIDxPfhsNipDrOQ5g_": {
+        "author": "Spami",
+        "content": "How are you? Long time no see? :)"
+    },
+    "-LxIE-dM_msaz1O9MouM": {
+        "author": "George",
+        "content": "Hello, guys! :))"
+    },
+    "-LxLgX_nOIiuvbwmxt8w": {
+        "author": "Spami",
+        "content": "Hello, George nice to see you! :)))"
+    }
+}
+
+module.exports = {mockData, fakeResponse};
