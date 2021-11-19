@@ -1,0 +1,20 @@
+{
+  "name": "JSProject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test1.js",
+  "scripts": {
+    "server": "http-server -p 3000 -a localhost -P http://localhost:3000? -c-1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lit-html": "^2.0.2",
+    "page": "^1.11.6"
+  },
+  "type": "commonjs",
+  "devDependencies": {
+    "http-server": "^14.0.0"
+  }
+}
