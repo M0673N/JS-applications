@@ -36,28 +36,28 @@ async function loadData() {
     topicsDiv.appendChild(fragment);
 }
 
-formEl.addEventListener('submit', async function (event) {
+formEl.addEventListener('click', async function (event) {
     event.preventDefault();
     if (event.target.classList.contains('cancel')) {
         formEl.reset();
-        return;
-    }
-    let formData = new FormData(formEl);
-    let title = formData.get('topicName');
-    let username = formData.get('username');
-    let postText = formData.get('postText');
-    if (!title || !username || !postText) {
-        return;
-    }
-    let date = getTime();
+    } else if (event.target.classList.contains('public')) {
+        let formData = new FormData(formEl);
+        let title = formData.get('topicName');
+        let username = formData.get('username');
+        let postText = formData.get('postText');
+        if (!title || !username || !postText) {
+            return;
+        }
+        let date = getTime();
 
-    await fetch(postUrl, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({title, username, postText, date})
-    })
-        .then(_ => loadData());
-    formEl.reset();
+        await fetch(postUrl, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({title, username, postText, date})
+        })
+            .then(_ => loadData());
+        formEl.reset();
+    }
 })
 
 loadData();
