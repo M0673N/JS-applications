@@ -14,7 +14,7 @@ function search() {
 
     let matches = 0;
     for (const el of towns) {
-        if (el.includes(inputEl.value.toLowerCase())) {
+        if (el.toLowerCase().includes(inputEl.value.toLowerCase())) {
             matches++;
         }
     }
